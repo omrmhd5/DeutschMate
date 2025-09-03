@@ -1,5 +1,5 @@
 import 'package:deutschmate/models/category_model.dart';
-import 'package:deutschmate/utils/constants.dart';
+import 'package:deutschmate/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomCategoryCard extends StatelessWidget {

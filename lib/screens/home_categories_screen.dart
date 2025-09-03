@@ -1,3 +1,4 @@
+import 'package:deutschmate/constants.dart';
 import 'package:deutschmate/data/categories_data.dart';
 import 'package:deutschmate/models/category_model.dart';
 import 'package:deutschmate/widgets/custom_category_card.dart';
@@ -9,56 +10,88 @@ class HomeCategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          CustomTitle(title: "Featured Lessons"),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(15, 0, 0, 10),
-            child: Container(
-              height: 200,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: featured.length,
-                itemBuilder: (context, index) {
-                  final category = featured[index];
-                  return CustomCategoryCard(
-                    category: CategoryModel(
-                      title: category["title"].toString(),
-                      subtitle: category["subtitle"]!.toString(),
-                      imgPath: category["imgPath"]!.toString(),
-                      color: category["color"] as Color,
-                      destination: Placeholder(),
-                    ),
-                  );
-                },
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(75),
+        child: AppBar(
+          leading: Padding(
+            padding: const EdgeInsets.fromLTRB(10, 2, 0, 0),
+            child: CircleAvatar(),
+          ),
+          title: Padding(
+            padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
+            child: Row(
+              children: [
+                Text(
+                  "Hello, User!",
+                  style: fontStyle(fontSize: 25, useDarkText: false),
+                ),
+                SizedBox(width: 10),
+                Image.asset("assets/images/app_icons/germany.png", width: 50),
+              ],
+            ),
+          ),
+          backgroundColor: primaryColor,
+          actions: [
+            Icon(
+              Icons.notifications_active_outlined,
+              color: iconColor,
+              size: 30,
+            ),
+          ],
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            CustomTitle(title: "Featured Lessons"),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(15, 0, 0, 10),
+              child: Container(
+                height: 200,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: featured.length,
+                  itemBuilder: (context, index) {
+                    final category = featured[index];
+                    return CustomCategoryCard(
+                      category: CategoryModel(
+                        title: category["title"].toString(),
+                        subtitle: category["subtitle"]!.toString(),
+                        imgPath: category["imgPath"]!.toString(),
+                        color: category["color"] as Color,
+                        destination: Placeholder(),
+                      ),
+                    );
+                  },
+                ),
               ),
             ),
-          ),
-          CustomTitle(title: "Continue Learning"),
-          GridView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            padding: EdgeInsets.only(left: 15),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 12,
+            CustomTitle(title: "Continue Learning"),
+            GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              padding: EdgeInsets.only(left: 15),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 12,
+              ),
+              itemCount: continued.length,
+              itemBuilder: (context, index) {
+                final category = continued[index];
+                return CustomCategoryCard(
+                  category: CategoryModel(
+                    title: category["title"].toString(),
+                    subtitle: category["subtitle"]!.toString(),
+                    imgPath: category["imgPath"]!.toString(),
+                    color: category["color"] as Color,
+                    destination: Placeholder(),
+                  ),
+                );
+              },
             ),
-            itemCount: continued.length,
-            itemBuilder: (context, index) {
-              final category = continued[index];
-              return CustomCategoryCard(
-                category: CategoryModel(
-                  title: category["title"].toString(),
-                  subtitle: category["subtitle"]!.toString(),
-                  imgPath: category["imgPath"]!.toString(),
-                  color: category["color"] as Color,
-                  destination: Placeholder(),
-                ),
-              );
-            },
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
