@@ -1,4 +1,5 @@
-import 'package:deutschmate/models/categories_models.dart';
+import 'package:deutschmate/data/categories_data.dart';
+import 'package:deutschmate/models/category_model.dart';
 import 'package:deutschmate/widgets/custom_category_card.dart';
 import 'package:deutschmate/widgets/custom_title.dart';
 import 'package:flutter/material.dart';
@@ -22,10 +23,13 @@ class HomeCategoriesScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final category = featured[index];
                   return CustomCategoryCard(
-                    title: category["title"].toString(),
-                    subtitle: category["subtitle"]!.toString(),
-                    imgPath: category["imgPath"]!.toString(),
-                    color: category["color"] as Color,
+                    category: CategoryModel(
+                      title: category["title"].toString(),
+                      subtitle: category["subtitle"]!.toString(),
+                      imgPath: category["imgPath"]!.toString(),
+                      color: category["color"] as Color,
+                      destination: Placeholder(),
+                    ),
                   );
                 },
               ),
@@ -44,10 +48,13 @@ class HomeCategoriesScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               final category = continued[index];
               return CustomCategoryCard(
-                title: category["title"].toString(),
-                subtitle: category["subtitle"]!.toString(),
-                imgPath: category["imgPath"]!.toString(),
-                color: category["color"] as Color,
+                category: CategoryModel(
+                  title: category["title"].toString(),
+                  subtitle: category["subtitle"]!.toString(),
+                  imgPath: category["imgPath"]!.toString(),
+                  color: category["color"] as Color,
+                  destination: Placeholder(),
+                ),
               );
             },
           ),

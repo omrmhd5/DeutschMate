@@ -1,27 +1,19 @@
+import 'package:deutschmate/models/category_model.dart';
 import 'package:deutschmate/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomCategoryCard extends StatelessWidget {
-  final String title;
-  final String subtitle;
-  final String imgPath;
-  final Color color;
-  const CustomCategoryCard({
-    super.key,
-    required this.title,
-    required this.subtitle,
-    required this.imgPath,
-    required this.color,
-  });
+  final CategoryModel category;
+  const CustomCategoryCard({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () => category.navigate(),
           style: ElevatedButton.styleFrom(
-            backgroundColor: color,
+            backgroundColor: category.color,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadiusGeometry.circular(20),
             ),
@@ -32,13 +24,19 @@ class CustomCategoryCard extends StatelessWidget {
               width: 110,
               child: Column(
                 children: [
-                  Image.asset("assets/images/${imgPath}.png"),
+                  Image.asset(
+                    "assets/images/${category.imgPath}.png",
+                    width: 100,
+                    height: 100,
+                  ),
                   Text(
-                    title,
+                    category.title,
+                    textAlign: TextAlign.center,
                     style: fontStyle(fontSize: 25, useDarkText: false),
                   ),
                   Text(
-                    subtitle,
+                    category.subtitle,
+                    textAlign: TextAlign.center,
                     style: fontStyle(fontSize: 15, useDarkText: false),
                   ),
                 ],
