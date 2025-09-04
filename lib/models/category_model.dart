@@ -16,10 +16,10 @@ class CategoryModel {
     required this.destination,
   });
 
-  void navigate() {
-    // Navigator.push(
-    //   context,
-    //   MaterialPageRoute(builder: (context) => destination),
-    // );
+  void navigate(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => destination),
+    );
   }
 }

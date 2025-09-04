@@ -11,11 +11,11 @@ class CustomCategoryCard extends StatelessWidget {
     return Row(
       children: [
         ElevatedButton(
-          onPressed: () => category.navigate(),
+          onPressed: () => category.navigate(context),
           style: ElevatedButton.styleFrom(
             backgroundColor: category.color,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadiusGeometry.circular(20),
+              borderRadius: BorderRadius.circular(20),
             ),
           ),
           child: Padding(

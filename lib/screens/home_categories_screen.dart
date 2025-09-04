@@ -11,35 +11,29 @@ class HomeCategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(75),
-        child: AppBar(
-          leading: Padding(
-            padding: const EdgeInsets.fromLTRB(10, 2, 0, 0),
-            child: CircleAvatar(),
+      appBar: AppBar(
+        toolbarHeight: 80,
+        backgroundColor: primaryColor,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 7),
+          child: CircleAvatar(
+            radius: 200,
+            child: Image.asset("assets/images/user.png"),
           ),
-          title: Padding(
-            padding: const EdgeInsets.fromLTRB(0, 2, 0, 0),
-            child: Row(
-              children: [
-                Text(
-                  "Hello, User!",
-                  style: fontStyle(fontSize: 25, useDarkText: false),
-                ),
-                SizedBox(width: 10),
-                Image.asset("assets/images/app_icons/germany.png", width: 50),
-              ],
+        ),
+        title: Row(
+          children: [
+            Text(
+              "Hello, User!",
+              style: fontStyle(fontSize: 25, useDarkText: false),
             ),
-          ),
-          backgroundColor: primaryColor,
-          actions: [
-            Icon(
-              Icons.notifications_active_outlined,
-              color: iconColor,
-              size: 30,
-            ),
+            SizedBox(width: 10),
+            Image.asset("assets/images/app_icons/germany.png", width: 45),
           ],
         ),
+        actions: [
+          Icon(Icons.notifications_active_outlined, color: iconColor, size: 30),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -60,7 +54,7 @@ class HomeCategoriesScreen extends StatelessWidget {
                         subtitle: category["subtitle"]!.toString(),
                         imgPath: category["imgPath"]!.toString(),
                         color: category["color"] as Color,
-                        destination: Placeholder(),
+                        destination: category["destination"] as Widget,
                       ),
                     );
                   },
@@ -85,7 +79,7 @@ class HomeCategoriesScreen extends StatelessWidget {
                     subtitle: category["subtitle"]!.toString(),
                     imgPath: category["imgPath"]!.toString(),
                     color: category["color"] as Color,
-                    destination: Placeholder(),
+                    destination: category["destination"] as Widget,
                   ),
                 );
               },

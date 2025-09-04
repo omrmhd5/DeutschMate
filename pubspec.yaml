@@ -52,6 +52,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/images/user.png
     - assets/images/animals/
     - assets/images/app_icons/
     - assets/images/colors/
@@ -91,4 +92,4 @@ flutter:
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: "assets/images/app_icons/germany.png"
+  image_path: "assets/images/germany.png"

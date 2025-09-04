@@ -1,4 +1,5 @@
 import 'package:deutschmate/constants.dart';
+import 'package:deutschmate/screens/animals_screen.dart';
 import 'package:flutter/material.dart';
 
 final featured = [
@@ -7,7 +8,7 @@ final featured = [
     "subtitle": "13 Words • Medium",
     "imgPath": "app_icons/animals",
     "color": secondaryColor,
-    "destination": Placeholder(),
+    "destination": AnimalsScreen(),
   },
   {
     "title": "Colors",

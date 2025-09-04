@@ -9,9 +9,12 @@ TextStyle fontStyle({
   double fontSize = 20,
   FontWeight fontWeight = FontWeight.normal,
   bool useDarkText = true,
+  Color? customColor,
 }) {
   return GoogleFonts.fredoka(
-    color: useDarkText ? const Color(0xFF080E1E) : const Color(0xFFFFFFFF),
+    color:
+        customColor ??
+        (useDarkText ? const Color(0xFF080E1E) : const Color(0xFFFFFFFF)),
     fontSize: fontSize,
     fontWeight: fontWeight,
   );

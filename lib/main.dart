@@ -1,3 +1,4 @@
+import 'package:deutschmate/screens/animals_screen.dart';
 import 'package:deutschmate/screens/home_categories_screen.dart';
 import 'package:flutter/material.dart';
 
