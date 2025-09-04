@@ -43,7 +43,7 @@ class LayoutScreen extends StatelessWidget {
         child: ListView.builder(
           itemCount: screenModel.translations.length,
           itemBuilder: (context, index) {
-            final item = animals[index];
+            final item = screenModel.translations[index];
             return CustomTranslationWidget(
               translation: TranslationModel(
                 imgPath: item["imgPath"]!,

@@ -1,0 +1,86 @@
+final foodrinks = [
+  {
+    "imgPath": "food_drinks/apple.png",
+    "englishText": "Apple",
+    "germanText": "Apfel",
+    "soundPath": "food_drinks/apple.mp3",
+  },
+  {
+    "imgPath": "food_drinks/banana.png",
+    "englishText": "Banana",
+    "germanText": "Banane",
+    "soundPath": "food_drinks/banana.mp3",
+  },
+  {
+    "imgPath": "food_drinks/bread.png",
+    "englishText": "Bread",
+    "germanText": "Brot",
+    "soundPath": "food_drinks/bread.mp3",
+  },
+  {
+    "imgPath": "food_drinks/butter.png",
+    "englishText": "Butter",
+    "germanText": "Butter",
+    "soundPath": "food_drinks/butter.mp3",
+  },
+  {
+    "imgPath": "food_drinks/carrot.png",
+    "englishText": "Carrot",
+    "germanText": "Karotte",
+    "soundPath": "food_drinks/carrot.mp3",
+  },
+  {
+    "imgPath": "food_drinks/cheese.png",
+    "englishText": "Cheese",
+    "germanText": "Käse",
+    "soundPath": "food_drinks/cheese.mp3",
+  },
+  {
+    "imgPath": "food_drinks/coffee.png",
+    "englishText": "Coffee",
+    "germanText": "Kaffee",
+    "soundPath": "food_drinks/coffee.mp3",
+  },
+  {
+    "imgPath": "food_drinks/egg.png",
+    "englishText": "Egg",
+    "germanText": "Ei",
+    "soundPath": "food_drinks/egg.mp3",
+  },
+  {
+    "imgPath": "food_drinks/meat.png",
+    "englishText": "Meat",
+    "germanText": "Fleisch",
+    "soundPath": "food_drinks/meat.mp3",
+  },
+  {
+    "imgPath": "food_drinks/milk.png",
+    "englishText": "Milk",
+    "germanText": "Milch",
+    "soundPath": "food_drinks/milk.mp3",
+  },
+  {
+    "imgPath": "food_drinks/orange.png",
+    "englishText": "Orange",
+    "germanText": "Orange",
+    "soundPath": "food_drinks/orange.mp3",
+  },
+  {
+    "imgPath": "food_drinks/soup.png",
+    "englishText": "Soup",
+    "germanText": "Suppe",
+    "soundPath": "food_drinks/soup.mp3",
+  },
+  {
+    "imgPath": "food_drinks/tea.png",
+    "englishText": "Tea",
+    "germanText": "Tee",
+    "soundPath": "food_drinks/tea.mp3",
+  },
+  {
+    "imgPath": "food_drinks/water.png",
+    "englishText": "Water",
+    "germanText": "Wasser",
+    "soundPath": "food_drinks/water.mp3",
+  },
+];
