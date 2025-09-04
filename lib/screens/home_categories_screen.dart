@@ -13,6 +13,12 @@ class HomeCategoriesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(30),
+            bottomRight: Radius.circular(30),
+          ),
+        ),
         backgroundColor: primaryColor,
         leading: Padding(
           padding: const EdgeInsets.only(left: 7),
@@ -32,7 +38,14 @@ class HomeCategoriesScreen extends StatelessWidget {
           ],
         ),
         actions: [
-          Icon(Icons.notifications_active_outlined, color: iconColor, size: 30),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 5, 10, 0),
+            child: Icon(
+              Icons.notifications_active_outlined,
+              color: iconColor,
+              size: 30,
+            ),
+          ),
         ],
       ),
       body: SingleChildScrollView(

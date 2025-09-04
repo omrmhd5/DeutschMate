@@ -11,11 +11,34 @@ class CustomTitle extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: Column(
         children: [
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Container(
-            color: Colors.grey[300],
-            width: double.infinity,
-            child: Center(child: Text(title, style: fontStyle(fontSize: 26))),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [primaryColor, Colors.lightBlueAccent],
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+              ),
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 6,
+                  offset: Offset(0, 3),
+                ),
+              ],
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  title,
+                  style: fontStyle(fontSize: 22, customColor: Colors.white),
+                ),
+                Icon(Icons.arrow_forward_ios, color: Colors.white, size: 18),
+              ],
+            ),
           ),
         ],
       ),
