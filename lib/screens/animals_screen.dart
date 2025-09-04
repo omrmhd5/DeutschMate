@@ -1,4 +1,7 @@
 import 'package:deutschmate/constants.dart';
+import 'package:deutschmate/data/animals_data.dart';
+import 'package:deutschmate/models/translation_model.dart';
+import 'package:deutschmate/widgets/custom_translation_card.dart';
 import 'package:flutter/material.dart';
 
 class AnimalsScreen extends StatelessWidget {
@@ -16,39 +19,35 @@ class AnimalsScreen extends StatelessWidget {
           },
           icon: Icon(Icons.arrow_back, size: 30, color: iconColor),
         ),
-        centerTitle: true,
-        title: Text(
-          "Animals Screen",
-          style: fontStyle(fontSize: 25, useDarkText: false),
+        title: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Animals Screen",
+                style: fontStyle(fontSize: 25, useDarkText: false),
+              ),
+              Image.asset("assets/images/app_icons/animals.png", width: 60),
+            ],
+          ),
         ),
+        actions: [SizedBox(width: 33)],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.purple.withOpacity(0.7),
-            borderRadius: BorderRadius.circular(15),
-          ),
-
-          child: ListTile(
-            leading: Image.asset("assets/images/animals/cat.png"),
-            title: Text(
-              "Cat",
-              style: fontStyle(fontSize: 23, useDarkText: false),
-            ),
-            subtitle: Text(
-              "Katze",
-              style: fontStyle(
-                fontSize: 19,
-                customColor: Colors.grey[300],
-                useDarkText: false,
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: ListView.builder(
+          itemCount: animals.length,
+          itemBuilder: (context, index) {
+            final item = animals[index];
+            return CustomTranslationCard(
+              translation: TranslationModel(
+                imgPath: item["imgPath"]!,
+                englishText: item["englishText"]!,
+                germanText: item["germanText"]!,
+                soundPath: item["soundPath"]!,
               ),
-            ),
-            trailing: IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.play_arrow, size: 40, color: iconColor),
-            ),
-          ),
+            );
+          },
         ),
       ),
     );

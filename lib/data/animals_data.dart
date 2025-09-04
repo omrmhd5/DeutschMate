@@ -1,0 +1,80 @@
+final animals = [
+  {
+    "imgPath": "animals/bee.png",
+    "englishText": "Bee",
+    "germanText": "Biene",
+    "soundPath": "animals/bee.mp3",
+  },
+  {
+    "imgPath": "animals/bird.png",
+    "englishText": "Bird",
+    "germanText": "Vogel",
+    "soundPath": "animals/bird.mp3",
+  },
+  {
+    "imgPath": "animals/bull.png",
+    "englishText": "Bull",
+    "germanText": "Stier",
+    "soundPath": "animals/bull.mp3",
+  },
+  {
+    "imgPath": "animals/cat.png",
+    "englishText": "Cat",
+    "germanText": "Katze",
+    "soundPath": "animals/cat.mp3",
+  },
+  {
+    "imgPath": "animals/chicken.png",
+    "englishText": "Chicken",
+    "germanText": "Huhn",
+    "soundPath": "animals/chicken.mp3",
+  },
+  {
+    "imgPath": "animals/dog.png",
+    "englishText": "Dog",
+    "germanText": "Hund",
+    "soundPath": "animals/dog.mp3",
+  },
+  {
+    "imgPath": "animals/dolphin.png",
+    "englishText": "Dolphin",
+    "germanText": "Delfin",
+    "soundPath": "animals/dolphin.mp3",
+  },
+  {
+    "imgPath": "animals/donkey.png",
+    "englishText": "Donkey",
+    "germanText": "Esel",
+    "soundPath": "animals/donkey.mp3",
+  },
+  {
+    "imgPath": "animals/dragon.png",
+    "englishText": "Dragon",
+    "germanText": "Drache",
+    "soundPath": "animals/dragon.mp3",
+  },
+  {
+    "imgPath": "animals/fish.png",
+    "englishText": "Fish",
+    "germanText": "Fisch",
+    "soundPath": "animals/fish.mp3",
+  },
+  {
+    "imgPath": "animals/horse.png",
+    "englishText": "Horse",
+    "germanText": "Pferd",
+    "soundPath": "animals/horse.mp3",
+  },
+  {
+    "imgPath": "animals/octopus.png",
+    "englishText": "Octopus",
+    "germanText": "Oktopus",
+    "soundPath": "animals/octopus.mp3",
+  },
+  {
+    "imgPath": "animals/sheep.png",
+    "englishText": "Sheep",
+    "germanText": "Schaf",
+    "soundPath": "animals/sheep.mp3",
+  },
+];
