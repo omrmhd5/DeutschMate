@@ -1,5 +1,4 @@
-import 'package:deutschmate/constants.dart';
-import 'package:deutschmate/data/animals_data.dart';
+import 'package:deutschmate/utils/constants.dart';
 import 'package:deutschmate/models/screen_model.dart';
 import 'package:deutschmate/models/translation_model.dart';
 import 'package:deutschmate/widgets/custom_translation_widget.dart';

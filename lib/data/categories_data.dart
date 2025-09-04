@@ -1,4 +1,4 @@
-import 'package:deutschmate/constants.dart';
+import 'package:deutschmate/utils/constants.dart';
 import 'package:deutschmate/screens/animals_screen.dart';
 import 'package:deutschmate/screens/colors_screen.dart';
 import 'package:deutschmate/screens/family_screen.dart';

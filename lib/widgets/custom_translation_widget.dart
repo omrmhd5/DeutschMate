@@ -1,4 +1,4 @@
-import 'package:deutschmate/constants.dart';
+import 'package:deutschmate/utils/constants.dart';
 import 'package:deutschmate/models/translation_model.dart';
 import 'package:flutter/material.dart';
 

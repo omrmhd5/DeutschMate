@@ -1,3 +1,5 @@
+import 'package:deutschmate/utils/audio_player_helper.dart';
+
 class TranslationModel {
   final String imgPath;
   final String englishText;
@@ -11,5 +13,7 @@ class TranslationModel {
     required this.soundPath,
   });
 
-  void playSound() {}
+  void playSound() {
+    AudioPlayerHelper.playAudio(soundPath);
+  }
 }

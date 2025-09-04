@@ -1,4 +1,4 @@
-import 'package:deutschmate/constants.dart';
+import 'package:deutschmate/utils/constants.dart';
 import 'package:deutschmate/data/categories_data.dart';
 import 'package:deutschmate/models/category_model.dart';
 import 'package:deutschmate/widgets/custom_category_widget.dart';
