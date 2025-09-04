@@ -2,9 +2,9 @@ import 'package:deutschmate/models/category_model.dart';
 import 'package:deutschmate/constants.dart';
 import 'package:flutter/material.dart';
 
-class CustomCategoryCard extends StatelessWidget {
+class CustomCategoryWidget extends StatelessWidget {
   final CategoryModel category;
-  const CustomCategoryCard({super.key, required this.category});
+  const CustomCategoryWidget({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {

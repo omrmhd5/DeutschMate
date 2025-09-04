@@ -2,9 +2,9 @@ import 'package:deutschmate/constants.dart';
 import 'package:deutschmate/models/translation_model.dart';
 import 'package:flutter/material.dart';
 
-class CustomTranslationCard extends StatelessWidget {
+class CustomTranslationWidget extends StatelessWidget {
   final TranslationModel translation;
-  const CustomTranslationCard({super.key, required this.translation});
+  const CustomTranslationWidget({super.key, required this.translation});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,9 @@ class CustomTranslationCard extends StatelessWidget {
           ),
         ),
         trailing: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            translation.playSound();
+          },
           icon: Icon(Icons.play_arrow, size: 40, color: iconColor),
         ),
       ),

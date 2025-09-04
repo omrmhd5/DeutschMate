@@ -1,7 +1,7 @@
 import 'package:deutschmate/constants.dart';
 import 'package:deutschmate/data/categories_data.dart';
 import 'package:deutschmate/models/category_model.dart';
-import 'package:deutschmate/widgets/custom_category_card.dart';
+import 'package:deutschmate/widgets/custom_category_widget.dart';
 import 'package:deutschmate/widgets/custom_title.dart';
 import 'package:flutter/material.dart';
 
@@ -48,7 +48,7 @@ class HomeCategoriesScreen extends StatelessWidget {
                   itemCount: featured.length,
                   itemBuilder: (context, index) {
                     final category = featured[index];
-                    return CustomCategoryCard(
+                    return CustomCategoryWidget(
                       category: CategoryModel(
                         title: category["title"].toString(),
                         subtitle: category["subtitle"]!.toString(),
@@ -73,7 +73,7 @@ class HomeCategoriesScreen extends StatelessWidget {
               itemCount: continued.length,
               itemBuilder: (context, index) {
                 final category = continued[index];
-                return CustomCategoryCard(
+                return CustomCategoryWidget(
                   category: CategoryModel(
                     title: category["title"].toString(),
                     subtitle: category["subtitle"]!.toString(),

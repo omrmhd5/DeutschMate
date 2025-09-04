@@ -10,4 +10,6 @@ class TranslationModel {
     required this.germanText,
     required this.soundPath,
   });
+
+  void playSound() {}
 }
